@@ -1,0 +1,41 @@
+body{
+  background:#ffffff;
+}
+
+.wrapper{
+  margin:100px auto;
+}
+
+$w : 5px; //dot diameter
+$n : 6; //number of divs
+$s : 5; //scale
+$color : #000000;
+
+.wrapper{
+  padding:$w * $n * $s;
+}
+.dots{
+  width:$w;
+  height:$w;
+  border-radius:50%;
+  margin:0 auto;
+  animation:rot 10s ease-in-out 0 infinite;
+}
+
+@for $i from 1 through $n{
+  .div#{$i}{
+    $num : $w * $i * $s;
+    $num-m: -($num);
+    box-shadow:
+      $num-m $num-m  0 0 $color,
+      $num $num-m  0 0 $color,
+      $num-m $num 0 0 $color,
+      $num $num 0 0 $color;
+  }
+}
+
+@keyframes rot{
+  0%{transform:rotate(0deg)}
+  50%{transform:rotate(360deg)}
+  100%{transform:rotate(0deg)}
+}
