@@ -24,7 +24,7 @@ def enquire(request):
 	
 	if form.is_valid():
 #Sendgrid start
-		sg = sendgrid.SendGridClient('athulkrishnan', 'W@lkinglif3+')
+		sg = sendgrid.SendGridClient('insert_username_here', 'insert_password_here')
 		message = sendgrid.Mail()
 		message.add_to('Athul Krishnan <atk007@gmail.com>')
 		message.add_to('Pratheesh Prakash <royal.mexian@gmail.com>')
