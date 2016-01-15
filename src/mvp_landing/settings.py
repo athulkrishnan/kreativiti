@@ -44,8 +44,8 @@ INSTALLED_APPS = (
 )
 
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'athulkrishnan'
-EMAIL_HOST_PASSWORD = 'W@lkinglif3+'
+EMAIL_HOST_USER = 'sendgrid_user_here'
+EMAIL_HOST_PASSWORD = 'sendgrid_passw_here'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
